@@ -1,0 +1,96 @@
+* {
+    font-family: Helvetica, sans-serif;
+    font-weight: 400px;
+}
+
+#scoreboard {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+#player, #computer {
+    position: relative;
+    flex-grow: 1;
+    border-radius: 5px;
+    width: 200px;
+    padding: 20px;
+    color: #fff;
+
+}
+
+#player {
+    background-color: #54a0ff;
+}
+
+#computer {
+    background-color: #ff6b6b;
+}
+
+#versus {
+    font-size: 40px;
+    text-align: center;
+    width: 70px;
+}
+
+#title {
+    color: #2a105e;
+    text-align: center;
+}
+
+#player-name, #computer-name {
+    margin: 0;
+    padding: 0;
+}
+
+#player-name, #computer-name {
+    text-align: left;
+}
+
+#computer-name {
+    text-align: right;
+}
+
+#player-points, #computer-points {
+    position: absolute;
+    top: 8px;
+    font-size: 32px;
+}
+
+#player-points{
+    right: 20px
+}
+
+#messages {
+    background-color: #5f27cd;
+    color: #fff;
+    font-size: 32px;
+    border-radius: 5px;
+    margin: 40px 0px;
+    padding: 20px;
+    text-align: center;
+}
+
+ul#player-choice, ul#computer-choice {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+ul#player-choice li, ul#computer-choice li{
+    display: inline;
+    
+}
+
+ul#player-choice li a, ul#computer-choice li a{
+    opacity: .2;
+}
+
+ul#player-choice li a:hover, ul#player-choice li a.selected, ul#computer-choice li a.selected{
+    opacity: 1;
+}
+
+ul#player-choice li a img, ul#computer-choice li a img{
+    max-height: 80px;
+}
