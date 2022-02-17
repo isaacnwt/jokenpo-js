@@ -4,10 +4,22 @@ var computerChoice = 0;
 var computerPoints = 0;
 var winner = -1;
 
-
+// Executes all the functions and logics
 function play(choice) {
+
     playerChoice = choice;
     computerChoice = Math.floor((Math.random() * (3 - 1 + 1))) + 1;
+
+    checkWinner(playerChoice, computerChoice);
+    showSelectedChoice();
+    showMessage();
+
+    document.getElementById("player-points").innerHTML = playerPoints;
+    document.getElementById("computer-points").innerHTML = computerPoints;
+}
+
+// Compare the choices, sets the winner and add the points
+function checkWinner(playerChoice, computerChoice) {
 
     // 1 - Stone 
     // 2 - Paper
@@ -23,7 +35,11 @@ function play(choice) {
         winner = 2;
         computerPoints++;
     }
+}
 
+
+// Changes the chosen class status to show it selected at screen
+function showSelectedChoice() {
     document.getElementById("player-choice-1").classList.remove("selected");
     document.getElementById("player-choice-2").classList.remove("selected");
     document.getElementById("player-choice-3").classList.remove("selected");
@@ -33,7 +49,11 @@ function play(choice) {
 
     document.getElementById("player-choice-" + playerChoice).classList.add("selected");
     document.getElementById("computer-choice-" + computerChoice).classList.add("selected");
+}
 
+
+// Shows the round result
+function showMessage() {
     if (winner == 0) {
         document.getElementById("messages").innerHTML = "Draw";
     }
@@ -43,7 +63,4 @@ function play(choice) {
     else if (winner == 2) {
         document.getElementById("messages").innerHTML = "Computer wins";
     }
-
-    document.getElementById("player-points").innerHTML = playerPoints;
-    document.getElementById("computer-points").innerHTML = computerPoints;
 }
