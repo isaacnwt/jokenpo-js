@@ -1,6 +1,10 @@
 * {
-    font-family: Helvetica, sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-weight: 400px;
+}
+
+body {
+    background-color: #150417;
 }
 
 #scoreboard {
@@ -9,7 +13,7 @@
     justify-items: center;
 }
 
-#player, #computer {
+.game-box {
     position: relative;
     flex-grow: 1;
     border-radius: 5px;
@@ -20,21 +24,22 @@
 }
 
 #player {
-    background-color: #54a0ff;
+    background-color: #0a369d;
 }
 
 #computer {
-    background-color: #ff6b6b;
+    background-color: #f71735;
 }
 
 #versus {
+    color: #fff;
     font-size: 40px;
     text-align: center;
     width: 70px;
 }
 
 #title {
-    color: #2a105e;
+    color: #fff;
     text-align: center;
 }
 
@@ -43,7 +48,7 @@
     padding: 0;
 }
 
-#player-name, #computer-name {
+#player-name {
     text-align: left;
 }
 
@@ -63,12 +68,15 @@
 
 #messages {
     background-color: #5f27cd;
+    width: 300px;
     color: #fff;
     font-size: 32px;
     border-radius: 5px;
     margin: 40px 0px;
     padding: 20px;
     text-align: center;
+    margin: auto;
+    margin-top: 80px;
 }
 
 ul#player-choice, ul#computer-choice {
