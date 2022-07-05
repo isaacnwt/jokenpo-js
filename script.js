@@ -54,13 +54,19 @@ function showSelectedChoice() {
 
 // Shows the round result
 function showMessage() {
+    let message_div = document.getElementById("messages");
     if (winner == 0) {
-        document.getElementById("messages").innerHTML = "Draw";
+        message_div.innerHTML = "Draw";
+        message_div.style.backgroundColor = "#5f27cd";
     }
     else if (winner == 1) {
-        document.getElementById("messages").innerHTML = "Player wins";
+        message_div.innerHTML = "Player wins";
+        message_div.style.backgroundColor = "#0a369d";
+
     }
     else if (winner == 2) {
-        document.getElementById("messages").innerHTML = "Computer wins";
+        message_div.innerHTML = "Computer wins";
+        message_div.style.backgroundColor = "#f71735";
+
     }
 }
